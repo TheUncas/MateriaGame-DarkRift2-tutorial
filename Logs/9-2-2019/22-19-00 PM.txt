@@ -1,0 +1,7 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 10.0.17134.0
+                                	CLS Version: 4.0.30319.42000
+                                	DarkRift: 2.3.1.0 - Free
+[Trace]   PluginFactory         Created plugin 'CompatibilityBichannelListener'.
+[Trace]   DefaultNetworkListener Starting compatibility listener.
+[Info]    DefaultNetworkListener Server mounted, listening on port 4296.
