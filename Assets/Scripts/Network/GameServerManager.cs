@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameServerManager : MonoBehaviour
 {
@@ -35,11 +36,14 @@ public class GameServerManager : MonoBehaviour
         serverReference.Server.ClientManager.ClientConnected += ClientConnected;
         serverReference.Server.ClientManager.ClientDisconnected += ClientDisconnected;
 
-        
+        //////////////////
+        /// Load the game scene
+        SceneManager.LoadScene("MainGameScene", LoadSceneMode.Additive);
+
     }
 
 
-    
+
     #endregion
 
     #region Server events
