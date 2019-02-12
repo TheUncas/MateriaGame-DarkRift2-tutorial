@@ -5,8 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utilities;
 
-public class GameServerManager : MonoBehaviour
+public class GameServerManager : MonoBehaviourSingletonPersistent<GameServerManager>
 {
 
     #region Properties

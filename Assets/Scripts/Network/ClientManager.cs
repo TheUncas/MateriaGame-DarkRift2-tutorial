@@ -1,8 +1,9 @@
 ﻿using DarkRift.Client.Unity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utilities;
 
-public class ClientManager : MonoBehaviour
+public class ClientManager : MonoBehaviourSingletonPersistent<ClientManager>
 {
 
     #region Properties
