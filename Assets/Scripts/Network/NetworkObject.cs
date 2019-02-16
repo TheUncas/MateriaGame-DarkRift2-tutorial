@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NetworkObject : MonoBehaviour
 {
@@ -19,7 +17,7 @@ public class NetworkObject : MonoBehaviour
     private void Start()
     {
         //If we are not on the server, destroy the gameobject
-        if(Equals(GameServerManager.instance, null))
+        if (Equals(GameServerManager.instance, null))
         {
             Destroy(gameObject);
         }
@@ -28,9 +26,9 @@ public class NetworkObject : MonoBehaviour
             // Get the instance id of the gameobject on the server scene
             id = GetInstanceID();
             //Register with the server
-            //GameServerManager.instance.RegisterNetworkObject(this);
+            GameServerManager.instance.RegisterNetworkObject(this);
         }
     }
-
     #endregion
 }
+
