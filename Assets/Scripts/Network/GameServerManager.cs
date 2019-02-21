@@ -73,6 +73,7 @@ public class GameServerManager : MonoBehaviourSingletonPersistent<GameServerMana
         SpawnMessageModel spawnMessageData = new SpawnMessageModel
         {
             networkID = pNetworkObject.id,
+            resourceID = pNetworkObject.resourceId,
             x = pNetworkObject.gameObject.transform.position.x,
             y = pNetworkObject.gameObject.transform.position.y
         };

@@ -145,7 +145,7 @@ MonoBehaviour:
   address: 127.0.0.1
   port: 4296
   ipVersion: 0
-  autoConnect: 1
+  autoConnect: 0
   invokeFromDispatcher: 1
   sniffData: 0
   maxCachedWriters: 2

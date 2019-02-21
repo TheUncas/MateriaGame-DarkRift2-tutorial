@@ -18,6 +18,11 @@ public class SpawnMessageModel : IDarkRiftSerializable
     /// Y position
     /// </summary>
     public float y { get; set; }
+
+    /// <summary>
+    /// Resource to spawn
+    /// </summary>
+    public int resourceID { get; set; }
     #endregion
 
 
@@ -25,6 +30,7 @@ public class SpawnMessageModel : IDarkRiftSerializable
     public void Deserialize(DeserializeEvent e)
     {
         networkID = e.Reader.ReadInt32();
+        resourceID = e.Reader.ReadInt32();
         x = e.Reader.ReadSingle();
         y = e.Reader.ReadSingle();
     }
@@ -32,6 +38,7 @@ public class SpawnMessageModel : IDarkRiftSerializable
     public void Serialize(SerializeEvent e)
     {
         e.Writer.Write(networkID);
+        e.Writer.Write(resourceID);
         e.Writer.Write(x);
         e.Writer.Write(y);
     } 
