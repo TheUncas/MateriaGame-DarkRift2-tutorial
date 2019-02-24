@@ -28,6 +28,11 @@ public class GameServerManager : MonoBehaviourSingletonPersistent<GameServerMana
     /// </summary>
     public List<NetworkObject> networkObjects;
 
+    /// <summary>
+    /// Frame counter on the server
+    /// </summary>
+    public int currentTick = 0;
+
     #endregion
 
     #region Unity Callbacks
@@ -48,6 +53,11 @@ public class GameServerManager : MonoBehaviourSingletonPersistent<GameServerMana
         /// Load the game scene
         SceneManager.LoadScene("MainGameScene", LoadSceneMode.Additive);
 
+    }
+
+    void FixedUpdate()
+    {
+        currentTick++;
     }
     #endregion
 

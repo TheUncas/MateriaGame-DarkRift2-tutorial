@@ -20,7 +20,7 @@ public class NetworkObject : MonoBehaviour
 
     #region Unity Callbacks
 
-    private void Start()
+    public virtual void Start()
     {
         //If we are not on the server and id is not set, destroy the gameobject
         if (Equals(GameServerManager.instance, null) && id == 0)
