@@ -15,10 +15,7 @@ public class ClientManager : MonoBehaviourSingletonPersistent<ClientManager>
     /// </summary>
     public UnityClient clientReference;
 
-    /// <summary>
-    /// Last tick received from the server
-    /// </summary>
-    public int lastReceivedTick = -1;
+
 
     #endregion
 
@@ -34,7 +31,7 @@ public class ClientManager : MonoBehaviourSingletonPersistent<ClientManager>
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
         //////////////////
         /// Load the game scene
         SceneManager.LoadScene("MainGameScene", LoadSceneMode.Additive);
@@ -54,7 +51,7 @@ public class ClientManager : MonoBehaviourSingletonPersistent<ClientManager>
 
     }
 
-    
+
     #endregion
 
     #region Implementation 

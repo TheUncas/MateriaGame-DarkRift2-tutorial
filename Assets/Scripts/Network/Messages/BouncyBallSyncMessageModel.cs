@@ -10,16 +10,6 @@ public class BouncyBallSyncMessageModel : IDarkRiftSerializable
     public Vector3 velocity;
     #endregion
 
-    #region Constructor
-    public BouncyBallSyncMessageModel(int pNetworkId, int pServerTick, Vector3 pPosition, Vector3 pVelocity)
-    {
-        networkID = pNetworkId;
-        serverTick = pServerTick;
-        position = pPosition;
-        velocity = pVelocity;
-    }
-    #endregion
-
     #region IDarkRiftSerializable implementation
     public void Deserialize(DeserializeEvent e)
     {
